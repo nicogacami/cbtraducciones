@@ -6,6 +6,9 @@
  #header.fixed a {
  color: #000;
 }
+ #header.fixed  .primary-nav a {
+ color: rgba(255, 255, 255, 0.75);
+}
  .nav-toggle {
  display: block;
 }
