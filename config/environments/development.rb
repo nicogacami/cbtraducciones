@@ -30,6 +30,25 @@ Rails.application.configure do
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = :local
 
+  # Opens emails in browsers
+  # config.action_mailer.delivery_method = :letter_opener
+  # routes.default_url_options =               { host: 'localhost:3000' }
+  # config.action_mailer.default_url_options = { host: 'localhost:3000' }
+  # config.action_mailer.asset_host = 'http://localhost:3000'
+  # config.action_controller.asset_host = 'http://localhost:3000'
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    user_name: 'apikey',
+    password: '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',
+    domain: 'cbtraducciones',
+    address: 'smtp.sendgrid.net',
+    port: '465',
+    tls: true,
+    authentication: :plain,
+    enable_starttls_auto: true
+  }
+  
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 

@@ -89,19 +89,18 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-md-offset-2 conForm">
-          <h3>Contacto</h3>
-          <p></p>
+          <h3 id="contact_title">Contacto</h3>
           <div id="message"></div>
-          <form method="post" action="sendemail" >
-            <input name="name" id="name" type="text" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"
-              placeholder="Nombre...">
-            <input name="email" id="email" type="email" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr"
-              placeholder="Email...">
-            <textarea name="comments" id="comments" type="text" cols="" rows="" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"
-              placeholder="Mensage..."></textarea>
-            <input type="submit" id="submit" name="send" class="submitBnt" value="Enviar">
-            <div id="simple-msg"></div>
-          </form>
+          <%= form_with(url: '/send_email', method: :post, :html => { :id => "comments_form" }) do %>
+						<%= text_field_tag(:contact_name, nil, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12", placeholder: 'Nombre...') %>
+            <span id="name_help_block" class="help-block"></span>
+            <%= text_field_tag(:contact_email, nil, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr", placeholder: 'Email...') %>  
+            <span id="email_help_block" class="help-block"></span>
+						<%= text_area_tag(:contact_message, nil, class: "col-xs-12 col-sm-12 col-md-12 col-lg-12", placeholder: 'Escriba su consulta...') %>
+            <span id="message_help_block" class="help-block"></span>
+						<%= button_tag("Enviar", class: "submitBnt", id: 'submit') %>
+						<div id="simple-msg"></div>
+					<% end %>
         </div>
       </div>
     </div>
@@ -144,5 +143,7 @@
     </div>
   </div-->
 </body>
+
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 
 </html>

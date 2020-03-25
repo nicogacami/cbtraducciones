@@ -26,7 +26,7 @@ h2 {
 	color: #2d3033;
 }
 h3 {
-	font-size: 33px;
+	font-size: 33px !important;
 	color: #2d3033;
 }
 h4 {
@@ -35,7 +35,7 @@ h4 {
 	font-weight: 400;
 }
 h5 {
-	font-size: 14px;
+	font-size: 15px !important;
 	color: #2d3033;
 	font-weight: 700;
 }
@@ -553,7 +553,8 @@ s*/
 	padding: 15px 30px;
 	border: none;
 	margin-right: 3%;
-	margin-bottom: 30px;
+	margin-bottom: 15px;
+	margin-top: 10px;
 	outline: none;
 	font-style: normal;
 	border-bottom: #e0e0e0 1px solid;
@@ -566,6 +567,7 @@ s*/
 	color: #797979;
 	padding: 15px 30px;
 	margin-bottom: 18px;
+	margin-top: 10px;
 	outline: none;
 	height: 150px;
 	font-style: normal;
@@ -608,6 +610,18 @@ s*/
 	font-weight: 700;
 }
 
+.contact-loader {
+	background-image: url("ajax-loader.gif");
+	background-position: center;
+	background-repeat: no-repeat;
+	width:25px;
+  height:25px;
+}
+
+.help-block {
+	color: #404040;
+	font-size: 1.5rem;
+}
 /* ------------------------------------------------------------------------------
 	 Footer
 -------------------------------------------------------------------------------*/
